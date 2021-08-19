@@ -55,7 +55,7 @@ The expected IDF1 is `67.0`.
 
 ### nuScenes
 
-To test the tracking performance on the validation set of MOT17, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/nu_stage_3_17fr.pth), copy it to `$PermaTrack_ROOT/models/`, update `motmetrics` with
+To test the tracking performance on the validation set of nuScenes, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/nu_stage_3_17fr.pth), copy it to `$PermaTrack_ROOT/models/`, update `motmetrics` with
 
 ~~~
 pip install motmetrics==1.1.3

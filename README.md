@@ -6,7 +6,7 @@ A video-based MOT approach capable of tracking through full occlusions:
 > *arXiv technical report ([arXiv 2103.14258](https://arxiv.org/pdf/2103.14258.pdf))*  
 
 
-    @inproceedings{breitenstein2009robust,
+    @inproceedings{tokmakov2021learning,
       title={Learning to Track with Object Permanence},
       author={Tokmakov, Pavel and Li, Jie and Burgard, Wolfram and Gaidon, Adrien},
       booktitle={ICCV},

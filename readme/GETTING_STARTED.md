@@ -6,7 +6,7 @@ This document provides tutorials to train and evaluate PermaTrack. Before gettin
 
 ### PD
 
-To test our pretrained model on the validation set of PD, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/pd_17fr_21ep_vis.pth), copy it to `$PermaTrack_ROOT/models/`, and run
+To test our pretrained model on the validation set of PD, download the [model](https://tri-ml-public.s3.amazonaws.com/github/permatrack/pd_17fr_21ep_vis.pth), copy it to `$PermaTrack_ROOT/models/`, and run
 
 ~~~
 cd $PermaTrack_ROOT/src
@@ -19,7 +19,7 @@ Please note that we are ignoring ground truth invisible object annotations in th
 
 ### KITTI Tracking
 
-To test the tracking performance on the validation set of KITTI with our pretrained model, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/kitti_half_pd_5ep.pth), copy it to `$PermaTrack_ROOT/models/`, and run
+To test the tracking performance on the validation set of KITTI with our pretrained model, download the [model](https://tri-ml-public.s3.amazonaws.com/github/permatrack/kitti_half_pd_5ep.pth), copy it to `$PermaTrack_ROOT/models/`, and run
 
 ~~~
 python test.py tracking --exp_id kitti_half --dataset kitti_tracking --dataset_version val_half --track_thresh 0.4 --load_model ../models/kitti_half_pd_5ep.pth --is_recurrent --gru_filter_size 7  --num_gru_layers 1 --visibility --visibility_thresh_eval 0.2 --stream_test
@@ -29,7 +29,7 @@ The expected Track mAP is `70.53`. Here Track AP evluation also takes into accou
 
 ### MOT17
 
-To test the tracking performance on the validation set of MOT17, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/mot_half.pth), copy it to `$PermaTrack_ROOT/models/`, and run
+To test the tracking performance on the validation set of MOT17, download the [model](https://tri-ml-public.s3.amazonaws.com/github/permatrack/mot_half.pth), copy it to `$PermaTrack_ROOT/models/`, and run
 
 ~~~
 python test.py tracking --exp_id mot17_half --dataset mot --dataset_version 17halfval --track_thresh 0.4 --load_model ../models/mot_half_13fr_5ep_occlasinvis.pth --is_recurrent --gru_filter_size 7 --num_gru_layers 1 --visibility_thresh_eval 0.1 --stream_test --only_ped --ltrb_amodal --visibility
@@ -55,7 +55,7 @@ The expected IDF1 is `67.0`.
 
 ### nuScenes
 
-To test the tracking performance on the validation set of nuScenes, download the [model](https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/nu_stage_3_17fr.pth), copy it to `$PermaTrack_ROOT/models/`, update `motmetrics` with
+To test the tracking performance on the validation set of nuScenes, download the [model](https://tri-ml-public.s3.amazonaws.com/github/permatrack/nu_stage_3_17fr.pth), copy it to `$PermaTrack_ROOT/models/`, update `motmetrics` with
 
 ~~~
 pip install motmetrics==1.1.3

@@ -1,5 +1,5 @@
 # Initial model pre-trained on NuScenes3D: https://drive.google.com/open?id=1ZSG9swryMEfBJ104WH8CP7kcypCobFlU
-# Resulting model trained on PD: https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/pd_17fr_21ep_vis.pth
+# Resulting model trained on PD: https://tri-ml-public.s3.amazonaws.com/github/permatrack/pd_17fr_21ep_vis.pth
 
 cd src
 # train

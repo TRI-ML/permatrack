@@ -1,5 +1,5 @@
-# Initial model pre-trained on PD + CrowdHuman: https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/crowdhuman.pth
-# Resulting model trained on MOT17 half train: https://s3.console.aws.amazon.com/s3/object/tri-ml-public?region=us-east-1&prefix=github/permatrack/mot_half.pth
+# Initial model pre-trained on PD + CrowdHuman: https://tri-ml-public.s3.amazonaws.com/github/permatrack/crowdhuman.pth
+# Resulting model trained on MOT17 half train: https://tri-ml-public.s3.amazonaws.com/github/permatrack/mot_half.pth
 
 cd src
 # train

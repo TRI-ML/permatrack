@@ -4,7 +4,7 @@ If you want to reproduce the results in the paper for benchmark evaluation or tr
 
 ### ParalleDomain (PD)
 
-This is the synthetic dataset used to pre-train our model. Pending a formal release, please email us to get a link to download the data. After dowloading, copy the contents into `$PermaTrack_ROOT/data/pd`.
+This is the synthetic dataset used to pre-train our model. You can download the images together with annotations under this [link](https://tri-ml-public.s3.amazonaws.com/datasets/pd_release.tar.gz). After dowloading, copy the contents into `$PermaTrack_ROOT/data/pd`.
 
 ### KITTI Tracking
 

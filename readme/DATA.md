@@ -2,9 +2,9 @@
 
 If you want to reproduce the results in the paper for benchmark evaluation or training, you will need to setup datasets.
 
-### ParalleDomain (PD)
+### ParallelDomain (PD)
 
-This is the synthetic dataset used to pre-train our model. You can download the images together with annotations under this [link](https://tri-ml-public.s3.amazonaws.com/datasets/pd_release.tar.gz). After dowloading, copy the contents into `$PermaTrack_ROOT/data/pd`.
+This is the synthetic dataset provided by [Parallel Domain](https://paralleldomain.com), which is used to pre-train our model. You can download the images together with annotations under this [link](https://tri-ml-public.s3.amazonaws.com/datasets/pd_release.tar.gz). After downloading, copy the contents into `$PermaTrack_ROOT/data/pd`.
 
 ### KITTI Tracking
 

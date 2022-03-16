@@ -26,9 +26,6 @@ class ConvGRUCell(nn.Module):
                                     padding=self.padding,
                                     bias=self.bias)
 
-        self.nl_can = None
-        if nl:
-            self.nl_can = NONLocalBlock2D(in_channels=hidden_dim)
         self.conv_can = nn.Conv2d(in_channels=input_dim + hidden_dim,
                               out_channels=self.hidden_dim, # for candidate neural memory
                               kernel_size=kernel_size,
@@ -58,8 +55,6 @@ class ConvGRUCell(nn.Module):
         combined = torch.cat([input_tensor, reset_gate * h_cur], dim=1)
         cc_cnm = self.conv_can(combined)
         cnm = torch.tanh(cc_cnm)
-        if self.nl_can is not None:
-            cnm = self.nl_can(cnm)
 
         h_next = (1 - update_gate) * h_cur + update_gate * cnm
         return h_next, reset_gate, update_gate

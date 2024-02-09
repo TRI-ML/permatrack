@@ -18,6 +18,23 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Set default shell to /bin/bash
 SHELL ["/bin/bash", "-cu"]
 
+RUN apt-get update && apt-get install -y software-properties-common
+RUN add-apt-repository ppa:graphics-drivers
+
+# Add NVIDIA CUDA public key
+RUN apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64/7fa2af80.pub
+
+# Add CUDA repository
+RUN echo "deb http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda.list
+
+# Add NVIDIA machine learning repository
+RUN echo "deb http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1804/x86_64 /" > /etc/apt/sources.list.d/cuda_learn.list
+
+# Update package lists
+RUN apt-get update
+
+RUN apt-get update && apt-get install -y apt-transport-https
+
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
     build-essential \
     cmake \
